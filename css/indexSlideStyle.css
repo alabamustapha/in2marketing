@@ -1,0 +1,257 @@
+html {
+  background: white;
+   scroll-behavior: smooth;
+}
+
+body{
+  font-family: "Playfair Display";
+}
+
+.top,
+.bottom{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*Images on  additional features - slide 4*/
+.feature-image{
+  border-radius: 25px;
+  height:auto;
+  width:100%;
+  max-height: 20%;
+}
+/*Containing the navbar and body*/
+.fluid-contain{
+   width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/*For logo in navbar*/
+.logo-image{
+    max-width: 80%;
+     max-height: 100px;
+}
+
+
+.navbar{
+  height: auto;
+  overflow: hidden;
+}
+
+/*For the images of the Screenshot carasel*/
+.screen{
+  height:auto;
+  max-width:80%;
+  max-height:10%;
+  width:90%;
+  padding-bottom: 10%;
+}
+
+/*Originally was designed to have scroll snaping on each scroll area
+As such the design is centred around havng a seperate navbar and scroll container
+this defines the entire scroll area for the slides*/
+.scroll-container {
+  height: 85%;
+  width:100%;
+  overflow: auto;
+  overflow-x: hidden;
+  /*scroll-snap-type: y mandatory;*/
+}
+/*Defines each individual slide*/
+.scroll-area {
+  /*scroll-snap-align: start;*/
+  min-height: 85vh;
+  height:fit-content;
+  overflow:visible;
+}
+
+
+/*Gradient for the line at the bottom of the navbar*/
+ .navbar-gradient{
+  background: linear-gradient(to left, 
+      rgba(131,58,180,1) 0%, rgba(252,85,208,1) 33%, rgba(255,139,101,1) 66%, rgba(255,235,43,1) 100%)
+    left 
+    bottom
+    no-repeat; 
+  background-size:100% 5px ;/* if linear-gradient, we need to resize it */
+};
+ 
+ /*Following defines the colours of the text*/
+.scroll-area:nth-of-type(1) {
+  background: #white;
+  color:white;
+}
+
+.scroll-area:nth-of-type(2) {
+  background: #white;
+  color:#b17dfd;
+}
+
+.scroll-area:nth-of-type(3) {
+  background: #white;
+  color:white;  
+}
+
+.scroll-area:nth-of-type(4) {
+  background: #yellow;
+  color:#fd7fdc;
+}
+
+.scroll-area:nth-of-type(5) {
+  background: #white;
+  /*color:#b17dfd;*/
+  color:white;
+
+}
+
+
+/*Titles of each slide*/
+.title{
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+/*Blurbs*/
+.blurb{
+  font-size: 90%;
+  color:black;
+}
+
+.blurb-white{
+  font-size: 90%;
+  color:white;
+}
+
+/*Splash refers to the first slide*/
+.splash-text-subheading{
+   color: white;
+   font-size: 100%;
+}
+
+.splash-container{
+  position: relative;
+  text-align: center;
+  overflow:hidden;
+
+}
+
+.splash-text-contain {
+
+   position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;  
+}
+/*On pages with gradients, serves same purpose as splash-text-contain*/
+.background-text-contain{
+	position: absolute;
+    top: 5%;
+    left: 0;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;  
+}
+/*On the register page, serves same purpose as splash-text-contain*/
+.splash-text-register {
+   position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;  
+}
+
+.splash-text{
+   text-align: center;
+  color: white;
+  }
+/*The images used in the background*/
+#splash-image{
+  object-fit: cover;
+    min-height: 80vh;
+    height:80%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 60% 60%;
+    
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: #888888;
+  text-align: center;
+}
+/*Subheading on the splash slide*/
+.splash-text-subheading{
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+/*The 'get it on etc' buttons on slide 5*/
+.app-buttons{
+  transform: translate(0%,60%);
+    top: 40%;
+    left: 0;
+}
+/*The 'get it on etc' buttons on splash*/
+.splash-app-buttons{
+  transform: translate(0%,20%);
+    top: 40%;
+    left: 0;
+}
+/*Css for mobiles*/
+@media screen and (max-width:800px) { 
+  .splash-text-register {
+    top:0%;
+  }
+
+  .splash-text-subheading{
+    padding-top: 0%;
+    padding-bottom: 0%;
+  }
+
+  .scroll-container {
+    height: 80%;
+    width:100%;
+    overflow: auto;
+    overflow-x: hidden;
+    scroll-snap-type: none;
+
+  } 
+  .scroll-area {
+   
+    height: auto;
+    overflow:visible;
+  }
+/*Buttons for the get it on etc*/
+  .app-buttons{
+transform: translate(0%,0%);
+  }
+  /*Used for the slide titles*/
+  .title{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  /*Screen shot carasel*/
+  .screen{
+    height:65%;
+    width:auto;
+    max-width:80%;
+    max-height:10%;
+  
+    padding-bottom: 10%;
+  }
+}
