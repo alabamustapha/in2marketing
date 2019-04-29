@@ -163,7 +163,7 @@ this defines the entire scroll area for the slides*/
 /*On the register page, serves same purpose as splash-text-contain*/
 .splash-text-register {
    position: absolute;
-    top: 25%;
+    top: 20%;
     left: 0;
     width: 100%;
     padding-left: 5%;
