@@ -5,10 +5,13 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
     	<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
-		<link rel="stylesheet" type="text/css" href="css/indexSlideStyle.css"/>
-		 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		 <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
-		 <script srcs="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+			<link rel="stylesheet" href="css/owl.carousel.min.css">
+			<link rel="stylesheet" href="css/owl.theme.default.min.css">
+			<link rel="stylesheet" type="text/css" href="css/indexSlideStyle.css"/> 
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		 	<script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+			<script srcs="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+			
 
 	</head>
 	<body>
@@ -154,6 +157,17 @@
 												Charity Partners
 									</div>
 							</div>
+
+									<div class="row owl-carousel">
+										<img src="images/charities/unicef.png" class="charities">
+										<img src="images/charities/wwf.png" class="charities">
+										<img src="images/charities/cancer-research-uk.jpg" class="charities">
+										<img src="images/charities/great-ormond-street-hospital-charity.png" class="charities">
+										<img src="images/charities/We_Are_MacMillan.png" class="charities">
+										<img src="images/charities/help-for-heroes.png" class="charities">
+										<img src="images/charities/index.png" class="charities">
+								</div>
+							</div>
 							<div>
 								<!--Wants an interactive carsel here-->
 							</div>
@@ -272,15 +286,17 @@
 	</div>
 
 	</div>
-
+	
 	 <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script>
     window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
     <script>
+
     $(function() {
         Holder.addTheme("thumb", {
             background: "#55595c",
@@ -289,15 +305,48 @@
         });
       
     });
-    $("#butt").click(function(){
-  $(".aronav").animate({
-    height: "702px"
-  }, 10000 ); // how long the animation should be
-});
-    $("html, body").animate({ scrollTop: 0 }, "slow");
+    
+		$("#butt").click(function(){
+			$(".aronav").animate({
+				height: "702px"
+			}, 10000 ); // how long the animation should be
+		});
+    
+		// $("html, body").animate({ scrollTop: 0 }, "slow");
+
+
+		$(document).ready(function(){
+			$(".owl-carousel").owlCarousel({
+						loop:true,
+						margin:10,
+						responsiveClass:true,
+						dots: false,
+						nav: false,
+						responsive:{
+								0:{
+										items:1,
+										nav:true
+								},
+								600:{
+										items:3,
+										nav:false
+								},
+								1000:{
+										items:5,
+										nav:true,
+										loop:false
+								}
+						}
+				});
+		});
+
+
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	
+	
 		
+
 	</body>
 </html>
