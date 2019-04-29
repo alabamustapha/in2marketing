@@ -118,8 +118,10 @@ this defines the entire scroll area for the slides*/
 
 /*Blurbs*/
 .blurb{
-  font-size: 90%;
+  font-size: 100%;
   color:black;
+  font-weight: 400;
+  text-align: justify;
 }
 
 .blurb-white{
@@ -241,9 +243,7 @@ transform: translate(0%,0%);
   }
   /*Used for the slide titles*/
   .title{
-    font-size: 1.5rem;
     font-weight: 400;
-    line-height: 1.2;
   }
   /*Screen shot carasel*/
   .screen{
